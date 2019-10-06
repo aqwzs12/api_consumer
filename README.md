@@ -5,7 +5,7 @@ This module retrieve data from the Pokemon API.
 To make an import you have two options : 
   - By Running cron 
   - By running a batch [ Config -> Import Pokemon ]
-  ![alt text](https://raw.githubusercontent.com/aqwzs12/api_consumer/blob/master/screencapture-running-batch.png)
+  ![alt text](https://raw.githubusercontent.com/aqwzs12/api_consumer/master/screencapture-running-batch.png)
 
 # To display Data 
    - It will be more intersting to have an bootstrap theme installed the pokemon full mode display is based on same class of it .
