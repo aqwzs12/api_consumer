@@ -7,7 +7,7 @@ use Drupal\api_consumer\PokemonService;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Class DefaultFm.
+ * Class ImportForm.
  */
 class ImportForm extends FormBase {
 
@@ -34,9 +34,6 @@ class ImportForm extends FormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    foreach ($form_state->getValues() as $key => $value) {
-      // @TODO: Validate fields.
-    }
     parent::validateForm($form, $form_state);
   }
 
@@ -65,7 +62,7 @@ class ImportForm extends FormBase {
       batch_set($batch);
     }
     else {
-      drupal_set_message(t("An Error Occured Please retry Again"), "error");
+      \Drupal::messenger()->addMessage(t('An Error Occured Please retry Again'), 'error');
     }
   }
 }
