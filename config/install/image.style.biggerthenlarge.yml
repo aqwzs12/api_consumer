@@ -1,7 +1,10 @@
 uuid: b51b5617-9ff8-44a9-8de4-684e6e5557b1
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+ enforced:
+   module:
+      - api_consumer
 name: biggerthenlarge
 label: Biggerthenlarge
 effects:
