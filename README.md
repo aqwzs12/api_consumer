@@ -18,5 +18,7 @@ To make an import you have two options :
    - '/pokemons' view that display all retrieved pokemons .
    - '/pokemons-gen-1' view that display only pokemon of the first generation with some filters exposed to user
    
+   PS : TO HAVE THE SAME DISPLAY AS THE PICTURES YOU HAVE TO INSTALL BOOTSTRAP THEME .
+   
    ![alt text](https://raw.githubusercontent.com/aqwzs12/api_consumer/master/screencapture-listing-pokemons.png)
    ![alt text](https://raw.githubusercontent.com/aqwzs12/api_consumer/master/screencapture-localhost-monster-detail.png)
