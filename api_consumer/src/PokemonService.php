@@ -176,12 +176,6 @@ class PokemonService
         return $pokemon;
     }
 
-    /**
-     *
-     *
-     * @return node
-     */
-
 
     /**
      * Some logic to categorize by generation  avoiding  more calls to server (HACK)
