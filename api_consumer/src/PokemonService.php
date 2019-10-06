@@ -18,16 +18,24 @@ class PokemonService
   const POKEURL_FIRST_GENERATION = 'https://pokeapi.co/api/v2/pokemon?limit=1000';
 
 
-  /**
+ /**
    * This is the function called to retrieve all pokemon  Urls
    * @return array
    */
   public static function BeginEntry()
   {
     try {
-      $api_response = file_get_contents(self::POKEURL_FIRST_GENERATION);
-      $json_response = json_decode($api_response, TRUE);
-      return ($json_response["results"]) ?: FALSE;
+      $result = [];   
+      $next_url = self::POKEURL_FIRST_GENERATION ;  
+      // In Case of You wan't to decrease the limit param
+     do {
+        $api_response = file_get_contents($next_url);
+        $json_response = json_decode($api_response, TRUE);
+        $next_url = $json_response["next"] ;
+        $result = array_merge($result , $json_response["results"]);
+      }  while(isset($json_response["next"]));
+
+      return ($result) ?: FALSE;
     } catch (Exception $e) {
       $e->printMessage();
     }
