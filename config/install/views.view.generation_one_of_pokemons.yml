@@ -8,6 +8,9 @@ dependencies:
   module:
     - node
     - user
+  enforced:
+   module:
+      - api_consumer
 _core:
   default_config_hash: 3znV_5T-4xhe4gZRkLvM3z2bR70bXx8lFH9_CVJ4O5M
 id: generation_one_of_pokemons

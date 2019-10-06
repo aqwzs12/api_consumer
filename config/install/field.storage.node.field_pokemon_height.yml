@@ -4,6 +4,9 @@ status: true
 dependencies:
   module:
     - node
+  enforced:
+   module:
+      - api_consumer
 _core:
   default_config_hash: IQna-qvEuUmhQeJpzo-aWhG1VR5Z2B4RVTOqWJvHDLY
 id: node.field_pokemon_height

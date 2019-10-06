@@ -4,6 +4,9 @@ status: true
 dependencies:
   module:
     - node
+  enforced:
+   module:
+      - api_consumer
 _core:
   default_config_hash: GmnSjVQsssCuCStt2XclmwnYSRu-mD1O4JPDN-2jfdM
 id: node.field_pokemon_img_url

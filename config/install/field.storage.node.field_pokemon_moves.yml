@@ -4,6 +4,9 @@ status: true
 dependencies:
   module:
     - node
+  enforced:
+   module:
+      - api_consumer
 _core:
   default_config_hash: 16K5j4LWPEofFgKkq64Buft2X0LKwH0vtZXR5YrP9oM
 id: node.field_pokemon_moves

@@ -4,6 +4,9 @@ status: true
 dependencies:
   module:
     - node
+  enforced:
+   module:
+      - api_consumer
 _core:
   default_config_hash: kgdn-2f7LjPkQW2zrxVS7DwOyUpOo0uKS87OGdSqCrw
 id: node.field_pokemon_hp

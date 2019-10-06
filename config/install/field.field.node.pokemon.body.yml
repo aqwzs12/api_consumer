@@ -7,6 +7,9 @@ dependencies:
     - node.type.pokemon
   module:
     - text
+  enforced:
+   module:
+      - api_consumer
 _core:
   default_config_hash: 5-Hdv4j18euMC-WPTFf_vXYAqVWIXOBMkoK7AtaRNqU
 id: node.pokemon.body

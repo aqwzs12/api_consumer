@@ -4,6 +4,9 @@ status: true
 dependencies:
   module:
     - node
+  enforced:
+   module:
+      - api_consumer
 _core:
   default_config_hash: qE5rUqAnB4uXUSjW1JDEDzTU_oNmFO8wcL1NBb5yS_4
 id: node.field_pokemon_abilities

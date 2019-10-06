@@ -4,6 +4,9 @@ status: true
 dependencies:
   module:
     - node
+  enforced:
+   module:
+      - api_consumer
 _core:
   default_config_hash: EYAbbnyIXgzhdDTM4nQOr4bd-9HXIYn5g3409eDmcDI
 id: node.field_speacial_attack

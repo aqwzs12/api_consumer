@@ -7,6 +7,9 @@ dependencies:
     - node.type.pokemon
   module:
     - image
+  enforced:
+   module:
+      - api_consumer
 _core:
   default_config_hash: J_bFXUoSZJrHXYB8WBEVQiJHhuav6FQ776uq_J75Wqo
 id: node.pokemon.field_pokemon_picture

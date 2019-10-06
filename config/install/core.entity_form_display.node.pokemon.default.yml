@@ -27,6 +27,10 @@ dependencies:
     - image
     - path
     - text
+  enforced:
+   module:
+      - api_consumer
+    
 _core:
   default_config_hash: T6eEVMJnBYjnUAr9IKMbMX7OYmCYM7gNPD9PFjQMzBo
 id: node.pokemon.default

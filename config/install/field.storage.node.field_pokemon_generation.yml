@@ -4,6 +4,9 @@ status: true
 dependencies:
   module:
     - node
+  enforced:
+   module:
+      - api_consumer
 id: node.field_pokemon_generation
 field_name: field_pokemon_generation
 entity_type: node

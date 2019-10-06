@@ -26,6 +26,9 @@ dependencies:
   module:
     - image
     - user
+  enforced:
+   module:
+      - api_consumer
 _core:
   default_config_hash: IYRmXdSpp4ymt4n5qjAOYruElQOjKEmQPp605vKethg
 id: node.pokemon.teaser

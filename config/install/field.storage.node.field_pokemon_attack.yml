@@ -4,6 +4,9 @@ status: true
 dependencies:
   module:
     - node
+  enforced:
+   module:
+      - api_consumer
 _core:
   default_config_hash: CgPxMPdQCaQvJCWzxREKktO-PN6DvFSed-8xT1CY1Gs
 id: node.field_pokemon_attack
