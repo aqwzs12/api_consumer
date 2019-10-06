@@ -74,7 +74,7 @@
 {% set types = node.field_pokemon_type %}
 {% set pokemon_defense = node.field_defense.value %}
 {% set pokemon_attack = node.field_pokemon_attack.value %}
-{% set pokemon_hp = node.field_pokemon_hp.value  %}
+{% set pokemon_hp = node.field_pokemon_hp.value %}
 {% set pokemon_speed = node.field_pokemon_speed.value %}
 {% set pokemon_moves = node.field_pokemon_moves %}
 
@@ -88,35 +88,35 @@ https://pokemondb.net/pokedex/all
 
 
 {% set imagestyle = {
-                                '#theme':      'image_style',
-                                '#style_name': 'medium',
-                                '#uri':        node.field_pokemon_picture.entity.uri.value,
-                                
-                            } %}
+    '#theme':      'image_style',
+    '#style_name': 'medium',
+    '#uri':        node.field_pokemon_picture.entity.uri.value,
+
+} %}
 
 <div class="row">
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail center">
-            {{ imagestyle}}
+            {{ imagestyle }}
             <div class="caption" style="text-align: center;">
                 <h3>{{ node.title.value }}</h3>
-                <p>{{'Height : ' | trans}}
-                    {{height}}</p>
-                <p>{{'Base exp: ' | trans}}
-                    {{base_exp}}</p>
-                <p>{{'Pokedex index: ' | trans}}
-                    {{game_index}}
+                <p>{{ 'Height : ' | trans }}
+                    {{ height }}</p>
+                <p>{{ 'Base exp: ' | trans }}
+                    {{ base_exp }}</p>
+                <p>{{ 'Pokedex index: ' | trans }}
+                    {{ game_index }}
                 </p>
-                <p>{{'Speed: ' | trans}}
+                <p>{{ 'Speed: ' | trans }}
                     {{ pokemon_speed }}
                 </p>
-                <p>{{'Attack: ' | trans}}
+                <p>{{ 'Attack: ' | trans }}
                     {{ pokemon_attack }}
                 </p>
-                <p>{{'Defense: ' | trans}}
+                <p>{{ 'Defense: ' | trans }}
                     {{ pokemon_defense }}
                 </p>
-                <p>{{'HP: ' | trans}}
+                <p>{{ 'HP: ' | trans }}
                     {{ pokemon_hp }}
                 </p>
             </div>
@@ -126,10 +126,11 @@ https://pokemondb.net/pokedex/all
 
         <div class="list-group">
             <a class="list-group-item active">
-                <h4 class="list-group-item-heading">{{'POKEMON TYPE' | trans}}</h4>
+                <h4 class="list-group-item-heading">{{ 'POKEMON TYPE' | trans }}</h4>
             </a>
             {% for type in types %}
-                <a href="{{ path('view.filter_of_pokemons.page_1', {'field_pokemon_type_value':  type.value  }) }}" class="list-group-item">
+                <a href="{{ path('view.filter_of_pokemons.page_1', {'field_pokemon_type_value':  type.value  }) }}"
+                   class="list-group-item">
                     <p class="list-group-item-text">{{ type.value }}</p>
                 </a>
             {% endfor %}
@@ -138,10 +139,11 @@ https://pokemondb.net/pokedex/all
 
         <div class="list-group">
             <a class="list-group-item active">
-                <h4 class="list-group-item-heading">{{'POKEMON ABILITY' | trans}}</h4>
+                <h4 class="list-group-item-heading">{{ 'POKEMON ABILITY' | trans }}</h4>
             </a>
             {% for ability in abilities %}
-                <a href="{{ path('view.filter_of_pokemons.page_1', {'field_pokemon_abilities_value':  ability.value  }) }}" class="list-group-item">
+                <a href="{{ path('view.filter_of_pokemons.page_1', {'field_pokemon_abilities_value':  ability.value  }) }}"
+                   class="list-group-item">
                     <p class="list-group-item-text">{{ ability.value }}</p>
                 </a>
             {% endfor %}
@@ -149,10 +151,11 @@ https://pokemondb.net/pokedex/all
 
         <div class="list-group">
             <a class="list-group-item active">
-                <h4 class="list-group-item-heading">{{'SOME POKEMON MOVES' | trans}}</h4>
+                <h4 class="list-group-item-heading">{{ 'SOME POKEMON MOVES' | trans }}</h4>
             </a>
             {% for move in pokemon_moves|slice(0, 4) %}
-                <a href="{{ path('view.filter_of_pokemons.page_1', {'field_pokemon_moves_value':  move.value  }) }}" class="list-group-item">
+                <a href="{{ path('view.filter_of_pokemons.page_1', {'field_pokemon_moves_value':  move.value  }) }}"
+                   class="list-group-item">
                     <p class="list-group-item-text">{{ move.value }}</p>
                 </a>
             {% endfor %}
@@ -162,22 +165,26 @@ https://pokemondb.net/pokedex/all
 </div>
 
 <div class="progress">
-    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{pokemon_speed}}" aria-valuemin="0" aria-valuemax="{{MAX_SPEED}}" style="width: {{pokemon_speed * 100 / MAX_SPEED}}%">
-        <span class="sr-only">{{pokemon_speed * 100 / MAX_SPEED}}% Complete (success)</span>
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ pokemon_speed }}"
+         aria-valuemin="0" aria-valuemax="{{ MAX_SPEED }}" style="width: {{ pokemon_speed * 100 / MAX_SPEED }}%">
+        <span class="sr-only">{{ pokemon_speed * 100 / MAX_SPEED }}% Complete (success)</span>
     </div>
 </div>
 <div class="progress">
-    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{pokemon_attack}}" aria-valuemin="0" aria-valuemax="{{MAX_ATTACK}}" style="width: {{pokemon_attack * 100 / MAX_ATTACK}}%">
+    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ pokemon_attack }}"
+         aria-valuemin="0" aria-valuemax="{{ MAX_ATTACK }}" style="width: {{ pokemon_attack * 100 / MAX_ATTACK }}%">
         <span class="sr-only">Attack</span>
     </div>
 </div>
 <div class="progress">
-    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{pokemon_defense}}" aria-valuemin="0" aria-valuemax="{{MAX_DEFENSE}}" style="width: {{pokemon_defense * 100 / MAX_DEFENSE}}%">
+    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{ pokemon_defense }}"
+         aria-valuemin="0" aria-valuemax="{{ MAX_DEFENSE }}" style="width: {{ pokemon_defense * 100 / MAX_DEFENSE }}%">
         <span class="sr-only">DEFENSE</span>
     </div>
 </div>
 <div class="progress">
-    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{pokemon_hp}}" aria-valuemin="0" aria-valuemax="{{MAX_HP}}" style="width: {{pokemon_hp * 100 / MAX_HP}}%">
+    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{ pokemon_hp }}" aria-valuemin="0"
+         aria-valuemax="{{ MAX_HP }}" style="width: {{ pokemon_hp * 100 / MAX_HP }}%">
         <span class="sr-only">HP</span>
     </div>
 </div>
@@ -185,19 +192,19 @@ https://pokemondb.net/pokedex/all
 
 <div class="row" style="text-align: center;">
     <span>
-        {{'Speed ' | trans}}
+        {{ 'Speed ' | trans }}
         <span class="glyphicon glyphicon-stop" style="
                                         color: #5cb85c;"></span>
 
-        {{'Attack ' | trans}}
+        {{ 'Attack ' | trans }}
         <span class="glyphicon glyphicon-stop" style="
                                         color: #5bc0de;"></span>
 
-        {{'Defense ' | trans}}
+        {{ 'Defense ' | trans }}
         <span class="glyphicon glyphicon-stop" style="
                                         color: #f0ad4e;"></span>
 
-        {{'HP ' | trans}}
+        {{ 'HP ' | trans }}
         <span class="glyphicon glyphicon-stop" style="
                                         color: #d9534f;"></span>
     </span>
