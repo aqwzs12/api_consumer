@@ -1,5 +1,10 @@
 # api_consumer
 
+
+# Install the module
+No dependencies needed .
+You can use drush or go to extends and install.
+
 # How it works
 This module retrieve data from the Pokemon API.
 To make an import you have two options : 
@@ -13,3 +18,5 @@ To make an import you have two options :
    - '/pokemons' view that display all retrieved pokemons .
    - '/pokemons-gen-1' view that display only pokemon of the first generation with some filters exposed to user
    
+   ![alt text](https://raw.githubusercontent.com/aqwzs12/api_consumer/master/screencapture-listing-pokemons.png)
+   ![alt text](https://raw.githubusercontent.com/aqwzs12/api_consumer/master/screencapture-localhost-monster-detail.png)
