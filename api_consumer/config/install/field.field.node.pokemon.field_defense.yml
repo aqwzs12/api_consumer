@@ -1,0 +1,25 @@
+uuid: a611a125-4569-4ccf-bf53-522b721ac1d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_defense
+    - node.type.pokemon
+_core:
+  default_config_hash: Q0xnTzgdn3gXu1ZQfocZxydXysBsHsZqgqksLWcy1go
+id: node.pokemon.field_defense
+field_name: field_defense
+entity_type: node
+bundle: pokemon
+label: defense
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

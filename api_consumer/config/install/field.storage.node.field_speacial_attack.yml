@@ -1,0 +1,20 @@
+uuid: d723af0a-344e-4ded-8fd3-920b148f3862
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: EYAbbnyIXgzhdDTM4nQOr4bd-9HXIYn5g3409eDmcDI
+id: node.field_speacial_attack
+field_name: field_speacial_attack
+entity_type: node
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,171 @@
+uuid: a0751008-3edd-45ae-8156-bcf2387ca05f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.pokemon.body
+    - field.field.node.pokemon.field_defense
+    - field.field.node.pokemon.field_pokemon_abilities
+    - field.field.node.pokemon.field_pokemon_api_id
+    - field.field.node.pokemon.field_pokemon_attack
+    - field.field.node.pokemon.field_pokemon_base_exp
+    - field.field.node.pokemon.field_pokemon_game_index
+    - field.field.node.pokemon.field_pokemon_generation
+    - field.field.node.pokemon.field_pokemon_height
+    - field.field.node.pokemon.field_pokemon_hp
+    - field.field.node.pokemon.field_pokemon_img_url
+    - field.field.node.pokemon.field_pokemon_moves
+    - field.field.node.pokemon.field_pokemon_name
+    - field.field.node.pokemon.field_pokemon_picture
+    - field.field.node.pokemon.field_pokemon_speed
+    - field.field.node.pokemon.field_pokemon_type
+    - field.field.node.pokemon.field_speacial_attack
+    - field.field.node.pokemon.field_special_defense
+    - image.style.biggerthenlarge
+    - node.type.pokemon
+  module:
+    - image
+    - text
+    - user
+_core:
+  default_config_hash: l2vxED6WazAF_7ajHOOOPtASYeiOjetZWrqp-Ae9UBI
+id: node.pokemon.default
+targetEntityType: node
+bundle: pokemon
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_defense:
+    weight: 12
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_pokemon_abilities:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pokemon_attack:
+    weight: 13
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_pokemon_base_exp:
+    weight: 3
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: number_unformatted
+    region: content
+  field_pokemon_game_index:
+    weight: 4
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: number_unformatted
+    region: content
+  field_pokemon_generation:
+    weight: 15
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_pokemon_height:
+    weight: 5
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: number_unformatted
+    region: content
+  field_pokemon_hp:
+    weight: 14
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_pokemon_moves:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pokemon_picture:
+    weight: 1
+    label: above
+    settings:
+      image_style: biggerthenlarge
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_pokemon_speed:
+    weight: 9
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_pokemon_type:
+    weight: 6
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_speacial_attack:
+    weight: 11
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_special_defense:
+    weight: 10
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_pokemon_api_id: true
+  field_pokemon_img_url: true
+  field_pokemon_name: true

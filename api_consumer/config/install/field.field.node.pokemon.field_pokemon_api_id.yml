@@ -1,0 +1,25 @@
+uuid: d045ffad-627e-434d-a261-724bfe61391a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokemon_api_id
+    - node.type.pokemon
+_core:
+  default_config_hash: sDi5nclaAj1AG7hL1nsSynpxe7_lhCPfqGew5it_5iI
+id: node.pokemon.field_pokemon_api_id
+field_name: field_pokemon_api_id
+entity_type: node
+bundle: pokemon
+label: 'pokemon api id'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

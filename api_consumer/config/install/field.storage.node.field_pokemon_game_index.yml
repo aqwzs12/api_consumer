@@ -1,0 +1,22 @@
+uuid: 014873f7-fbd7-4a13-9163-0b258f7b929b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: zQSkilgClFBvtIRSlR05iaggw4zPMfW1ecg628NyfE8
+id: node.field_pokemon_game_index
+field_name: field_pokemon_game_index
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: dbfb29bb-677f-4339-a201-fb48bf09f16f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokemon_abilities
+    - node.type.pokemon
+_core:
+  default_config_hash: tPW7hu0palU4whcTbSZma9mxk0l02tZwCj9U1nH1mWg
+id: node.pokemon.field_pokemon_abilities
+field_name: field_pokemon_abilities
+entity_type: node
+bundle: pokemon
+label: pokemon_abilities
+description: 'This is the pokemon Abilities'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

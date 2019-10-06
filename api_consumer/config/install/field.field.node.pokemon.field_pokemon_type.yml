@@ -1,0 +1,21 @@
+uuid: 14dd9486-d519-4426-9a30-a719f0529cdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokemon_type
+    - node.type.pokemon
+_core:
+  default_config_hash: WLG2EJvjoCkM8w0l-SWhRtC03BsY61OUfE3JjtUmPPg
+id: node.pokemon.field_pokemon_type
+field_name: field_pokemon_type
+entity_type: node
+bundle: pokemon
+label: 'pokemon type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

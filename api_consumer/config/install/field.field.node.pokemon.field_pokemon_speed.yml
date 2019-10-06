@@ -1,0 +1,27 @@
+uuid: 4b207aa0-22c0-44d9-9ef8-3a594fb83c32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokemon_speed
+    - node.type.pokemon
+_core:
+  default_config_hash: yiUY9W2GfuWEsPN24q4igUVz8DZB0U5rEVANyFpg7r0
+id: node.pokemon.field_pokemon_speed
+field_name: field_pokemon_speed
+entity_type: node
+bundle: pokemon
+label: 'pokemon speed'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,27 @@
+uuid: cfa6879b-0ccf-4fd7-aff8-b6ed96b50f7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokemon_base_exp
+    - node.type.pokemon
+_core:
+  default_config_hash: qZc8G_YMn_xyhZedo726ySjjq4d6SdH7OxHU6WzHaEw
+id: node.pokemon.field_pokemon_base_exp
+field_name: field_pokemon_base_exp
+entity_type: node
+bundle: pokemon
+label: 'pokemon base exp'
+description: 'The base exp for the pokemon'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

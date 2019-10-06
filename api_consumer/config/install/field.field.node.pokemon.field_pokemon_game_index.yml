@@ -1,0 +1,25 @@
+uuid: 6ba27244-90cb-422a-9281-4e726209ca28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokemon_game_index
+    - node.type.pokemon
+_core:
+  default_config_hash: FgHL0wJXM6lc74E287HngsGq83uYuzvANSOKUW-TB9E
+id: node.pokemon.field_pokemon_game_index
+field_name: field_pokemon_game_index
+entity_type: node
+bundle: pokemon
+label: 'pokemon game index'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

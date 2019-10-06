@@ -1,0 +1,21 @@
+uuid: c7d0d28f-c120-4c2d-b8ad-9ac17152c620
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokemon_moves
+    - node.type.pokemon
+_core:
+  default_config_hash: gz7DJ5vJt0jORc-2cjG6Hfps-eKT5WaevNp2Tx6CukI
+id: node.pokemon.field_pokemon_moves
+field_name: field_pokemon_moves
+entity_type: node
+bundle: pokemon
+label: 'pokemon moves'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,25 @@
+uuid: d816ffa9-bc29-46cc-83e8-c1476f1cb731
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokemon_hp
+    - node.type.pokemon
+_core:
+  default_config_hash: 2t9I3XbpIslQszJsn7XBUrfxBx6AtiwTRPLDvpf03JY
+id: node.pokemon.field_pokemon_hp
+field_name: field_pokemon_hp
+entity_type: node
+bundle: pokemon
+label: 'pokemon hp'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

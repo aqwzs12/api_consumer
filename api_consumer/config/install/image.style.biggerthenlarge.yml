@@ -1,0 +1,14 @@
+uuid: b51b5617-9ff8-44a9-8de4-684e6e5557b1
+langcode: en
+status: true
+dependencies: {  }
+name: biggerthenlarge
+label: Biggerthenlarge
+effects:
+  462c6f8c-b768-44f9-8039-8e623b318c0b:
+    uuid: 462c6f8c-b768-44f9-8039-8e623b318c0b
+    id: image_resize
+    weight: 1
+    data:
+      width: 700
+      height: 700

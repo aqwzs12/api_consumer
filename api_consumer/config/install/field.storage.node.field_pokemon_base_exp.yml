@@ -1,0 +1,22 @@
+uuid: 6789cefb-4fb1-47c6-8cd5-35661aa003ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 9k2HW_W5VUVsTWKHopKn9X-jMrEj59I9_JPytR2UwQ8
+id: node.field_pokemon_base_exp
+field_name: field_pokemon_base_exp
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

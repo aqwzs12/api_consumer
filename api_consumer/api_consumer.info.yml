@@ -1,0 +1,5 @@
+name: 'API CONSUMER'
+type: module
+description: API Consumer module the easiest way to consume api
+core: 8.x
+package: 'Custom'

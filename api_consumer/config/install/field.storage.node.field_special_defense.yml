@@ -1,0 +1,22 @@
+uuid: 17070f9b-3696-4d54-b37c-5a41c6753441
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: D35yNyrkgX7MNpP_OAKHInqm84JsqxZ2oOYDpx-rshk
+id: node.field_special_defense
+field_name: field_special_defense
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

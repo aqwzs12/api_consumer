@@ -1,0 +1,22 @@
+uuid: 60677603-38d0-4298-806c-0c426d918a40
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: kgdn-2f7LjPkQW2zrxVS7DwOyUpOo0uKS87OGdSqCrw
+id: node.field_pokemon_hp
+field_name: field_pokemon_hp
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

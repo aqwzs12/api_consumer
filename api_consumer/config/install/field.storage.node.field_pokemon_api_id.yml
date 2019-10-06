@@ -1,0 +1,22 @@
+uuid: 698c0121-dc47-4f15-9e27-8700fb60b3a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: JKJPdJH592tuNk-r2rjEQFeD8HhFA4e-nAenn1NmNfw
+id: node.field_pokemon_api_id
+field_name: field_pokemon_api_id
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

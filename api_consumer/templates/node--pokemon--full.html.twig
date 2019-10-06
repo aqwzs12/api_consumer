@@ -1,0 +1,204 @@
+{#
+/**
+ * @file
+ * Bartik's theme implementation to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - node.getCreatedTime() will return the node creation timestamp.
+ *   - node.hasField('field_example') returns TRUE if the node bundle includes
+ *     field_example. (This does not indicate the presence of a value in this
+ *     field.)
+ *   - node.isPublished() will return whether the node is published or not.
+ *   Calling other methods, such as node.delete(), will result in an exception.
+ *   See \Drupal\node\Entity\Node for a full list of public properties and
+ *   methods for the node object.
+ * - label: (optional) The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: (optional) Themed creation date field.
+ * - author_name: (optional) Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_node()
+ */
+#}
+
+{% set abilities = node.field_pokemon_abilities %}
+{% set base_exp = node.field_pokemon_base_exp.value %}
+{% set game_index = node.field_pokemon_game_index.value %}
+{% set height = node.field_pokemon_height.value %}
+{% set types = node.field_pokemon_type %}
+{% set pokemon_defense = node.field_defense.value %}
+{% set pokemon_attack = node.field_pokemon_attack.value %}
+{% set pokemon_hp = node.field_pokemon_hp.value  %}
+{% set pokemon_speed = node.field_pokemon_speed.value %}
+{% set pokemon_moves = node.field_pokemon_moves %}
+
+{# According to 
+https://pokemondb.net/pokedex/all
+ the value here are the max value for the species of all generations #}
+{% set MAX_HP = 255 %}
+{% set MAX_ATTACK = 190 %}
+{% set MAX_DEFENSE = 230 %} 
+{% set MAX_SPEED = 180 %}
+
+
+{% set imagestyle = {
+                                '#theme':      'image_style',
+                                '#style_name': 'medium',
+                                '#uri':        node.field_pokemon_picture.entity.uri.value,
+                                
+                            } %}
+
+<div class="row">
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail center">
+            {{ imagestyle}}
+            <div class="caption" style="text-align: center;">
+                <h3>{{ node.title.value }}</h3>
+                <p>{{'Height : ' | trans}}
+                    {{height}}</p>
+                <p>{{'Base exp: ' | trans}}
+                    {{base_exp}}</p>
+                <p>{{'Pokedex index: ' | trans}}
+                    {{game_index}}
+                </p>
+                <p>{{'Speed: ' | trans}}
+                    {{ pokemon_speed }}
+                </p>
+                <p>{{'Attack: ' | trans}}
+                    {{ pokemon_attack }}
+                </p>
+                <p>{{'Defense: ' | trans}}
+                    {{ pokemon_defense }}
+                </p>
+                <p>{{'HP: ' | trans}}
+                    {{ pokemon_hp }}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-8">
+
+        <div class="list-group">
+            <a class="list-group-item active">
+                <h4 class="list-group-item-heading">{{'POKEMON TYPE' | trans}}</h4>
+            </a>
+            {% for type in types %}
+                <a href="{{ path('view.filter_of_pokemons.page_1', {'field_pokemon_type_value':  type.value  }) }}" class="list-group-item">
+                    <p class="list-group-item-text">{{ type.value }}</p>
+                </a>
+            {% endfor %}
+        </div>
+
+
+        <div class="list-group">
+            <a class="list-group-item active">
+                <h4 class="list-group-item-heading">{{'POKEMON ABILITY' | trans}}</h4>
+            </a>
+            {% for ability in abilities %}
+                <a href="{{ path('view.filter_of_pokemons.page_1', {'field_pokemon_abilities_value':  ability.value  }) }}" class="list-group-item">
+                    <p class="list-group-item-text">{{ ability.value }}</p>
+                </a>
+            {% endfor %}
+        </div>
+
+        <div class="list-group">
+            <a class="list-group-item active">
+                <h4 class="list-group-item-heading">{{'SOME POKEMON MOVES' | trans}}</h4>
+            </a>
+            {% for move in pokemon_moves|slice(0, 4) %}
+                <a href="{{ path('view.filter_of_pokemons.page_1', {'field_pokemon_moves_value':  move.value  }) }}" class="list-group-item">
+                    <p class="list-group-item-text">{{ move.value }}</p>
+                </a>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+
+<div class="progress">
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{pokemon_speed}}" aria-valuemin="0" aria-valuemax="{{MAX_SPEED}}" style="width: {{pokemon_speed * 100 / MAX_SPEED}}%">
+        <span class="sr-only">{{pokemon_speed * 100 / MAX_SPEED}}% Complete (success)</span>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{pokemon_attack}}" aria-valuemin="0" aria-valuemax="{{MAX_ATTACK}}" style="width: {{pokemon_attack * 100 / MAX_ATTACK}}%">
+        <span class="sr-only">Attack</span>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{pokemon_defense}}" aria-valuemin="0" aria-valuemax="{{MAX_DEFENSE}}" style="width: {{pokemon_defense * 100 / MAX_DEFENSE}}%">
+        <span class="sr-only">DEFENSE</span>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{pokemon_hp}}" aria-valuemin="0" aria-valuemax="{{MAX_HP}}" style="width: {{pokemon_hp * 100 / MAX_HP}}%">
+        <span class="sr-only">HP</span>
+    </div>
+</div>
+
+
+<div class="row" style="text-align: center;">
+    <span>
+        {{'Speed ' | trans}}
+        <span class="glyphicon glyphicon-stop" style="
+                                        color: #5cb85c;"></span>
+
+        {{'Attack ' | trans}}
+        <span class="glyphicon glyphicon-stop" style="
+                                        color: #5bc0de;"></span>
+
+        {{'Defense ' | trans}}
+        <span class="glyphicon glyphicon-stop" style="
+                                        color: #f0ad4e;"></span>
+
+        {{'HP ' | trans}}
+        <span class="glyphicon glyphicon-stop" style="
+                                        color: #d9534f;"></span>
+    </span>
+</div>

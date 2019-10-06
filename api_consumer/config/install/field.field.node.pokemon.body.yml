@@ -1,0 +1,24 @@
+uuid: d3038c59-a4af-4f2d-a11a-6151b3928b67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.pokemon
+  module:
+    - text
+_core:
+  default_config_hash: 5-Hdv4j18euMC-WPTFf_vXYAqVWIXOBMkoK7AtaRNqU
+id: node.pokemon.body
+field_name: body
+entity_type: node
+bundle: pokemon
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

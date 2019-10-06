@@ -1,0 +1,6 @@
+api_consumer.import_form:
+  title: 'Import Pokemons'
+  route_name: api_consumer.import_form
+  description: 'Launch the batch to import pokemons'
+  parent: system.admin_config_system
+  weight: 99

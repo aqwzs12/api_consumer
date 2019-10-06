@@ -1,0 +1,27 @@
+uuid: caa80b98-3b11-490c-bb4f-d1f2abe73f95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_special_defense
+    - node.type.pokemon
+_core:
+  default_config_hash: eoxQflxcsTyvTNhEzEbL6jfhV3S9xwjRsGbny2LbPik
+id: node.pokemon.field_special_defense
+field_name: field_special_defense
+entity_type: node
+bundle: pokemon
+label: 'special defense'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

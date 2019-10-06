@@ -1,0 +1,20 @@
+uuid: 18601254-b6a6-479a-af70-5e718dbda153
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: 4F0mDwwhGBkuxFOriGNAE97wwFJ42BEy4iypJitUyw8
+name: Pokemon
+type: pokemon
+description: 'This is a pokemon'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,9 @@
+api_consumer.import_form:
+  path: '/admin/config/api_consumer/import'
+  defaults:
+    _form: '\Drupal\api_consumer\Form\ImportForm'
+    _title: 'ImportForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

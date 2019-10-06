@@ -1,0 +1,22 @@
+uuid: 61601a58-33f5-4228-bc46-252e9e3172b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: ZWMm69b97tlrxqW33gnkY7I38iLIipdK_eZTQ61WzOI
+id: node.field_defense
+field_name: field_defense
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

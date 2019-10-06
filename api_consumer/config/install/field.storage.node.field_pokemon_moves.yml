@@ -1,0 +1,23 @@
+uuid: 64ace497-c721-4b6a-8fb6-d450246013cc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 16K5j4LWPEofFgKkq64Buft2X0LKwH0vtZXR5YrP9oM
+id: node.field_pokemon_moves
+field_name: field_pokemon_moves
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

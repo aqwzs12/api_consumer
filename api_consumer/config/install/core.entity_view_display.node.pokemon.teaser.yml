@@ -1,0 +1,66 @@
+uuid: 215f5003-803b-4c9e-b341-4742f9fd092e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.pokemon.body
+    - field.field.node.pokemon.field_defense
+    - field.field.node.pokemon.field_pokemon_abilities
+    - field.field.node.pokemon.field_pokemon_api_id
+    - field.field.node.pokemon.field_pokemon_attack
+    - field.field.node.pokemon.field_pokemon_base_exp
+    - field.field.node.pokemon.field_pokemon_game_index
+    - field.field.node.pokemon.field_pokemon_height
+    - field.field.node.pokemon.field_pokemon_hp
+    - field.field.node.pokemon.field_pokemon_img_url
+    - field.field.node.pokemon.field_pokemon_moves
+    - field.field.node.pokemon.field_pokemon_name
+    - field.field.node.pokemon.field_pokemon_picture
+    - field.field.node.pokemon.field_pokemon_speed
+    - field.field.node.pokemon.field_pokemon_type
+    - field.field.node.pokemon.field_speacial_attack
+    - field.field.node.pokemon.field_special_defense
+    - image.style.large
+    - node.type.pokemon
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: IYRmXdSpp4ymt4n5qjAOYruElQOjKEmQPp605vKethg
+id: node.pokemon.teaser
+targetEntityType: node
+bundle: pokemon
+mode: teaser
+content:
+  field_pokemon_picture:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_defense: true
+  field_pokemon_abilities: true
+  field_pokemon_api_id: true
+  field_pokemon_attack: true
+  field_pokemon_base_exp: true
+  field_pokemon_game_index: true
+  field_pokemon_height: true
+  field_pokemon_hp: true
+  field_pokemon_img_url: true
+  field_pokemon_moves: true
+  field_pokemon_name: true
+  field_pokemon_speed: true
+  field_pokemon_type: true
+  field_speacial_attack: true
+  field_special_defense: true

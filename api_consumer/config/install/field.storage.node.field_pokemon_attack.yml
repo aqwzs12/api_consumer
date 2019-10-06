@@ -1,0 +1,22 @@
+uuid: 27657e35-8da0-4129-9e1c-b30df8c3e448
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: CgPxMPdQCaQvJCWzxREKktO-PN6DvFSed-8xT1CY1Gs
+id: node.field_pokemon_attack
+field_name: field_pokemon_attack
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 7b5fd6d3-5032-4a82-b7f3-00efedd3a327
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pokemon_name
+    - node.type.pokemon
+  module:
+    - text
+_core:
+  default_config_hash: v2BnW8iJinEulqBpL3wTB5NsHiWNXaJ39XjsUD9aUOk
+id: node.pokemon.field_pokemon_name
+field_name: field_pokemon_name
+entity_type: node
+bundle: pokemon
+label: pokemon_name
+description: 'This is the pokemon name'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
