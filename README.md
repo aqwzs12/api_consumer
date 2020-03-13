@@ -13,7 +13,7 @@ To make an import you have two options :
   ![alt text](https://raw.githubusercontent.com/aqwzs12/api_consumer/master/screencapture-running-batch.png)
 
 # To display Data 
-   - It will be more intersting to have an bootstrap theme installed the pokemon full mode display is based on same class of it .
+   - It will be more intersting to have bootstrap theme installed the pokemon full mode display is based on bootstrap stylesheet .
  ( You can see attached to this repo some screen shot of what it looks like when you're on bootstrap )
    - '/pokemons' view that display all retrieved pokemons .
    - '/pokemons-gen-1' view that display only pokemon of the first generation with some filters exposed to user
